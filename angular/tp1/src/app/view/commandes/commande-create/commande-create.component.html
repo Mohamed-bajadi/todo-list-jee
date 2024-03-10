@@ -1,0 +1,20 @@
+<div class="card">
+  <div class="card-header"></div>
+  <div class="card-body">
+    <div class="form-group">
+      <label for="reference">Refrerence</label>
+      <input id="reference" type="text" class="form-control" [(ngModel)]="item.ref">
+    </div>
+
+    <div class="form-group">
+      <label for="total">Total</label>
+      <input id="total" type="text" class="form-control" [(ngModel)]="item.total">
+    </div>
+    <div class="form-group">
+      <label for="totalPaye">Total Paye</label>
+      <input id="totalPaye" type="text" class="form-control" [(ngModel)]="item.totalPaye">
+    </div>
+  <div class="card-footer">
+    <button class="btn btn-lg btn-info" (click)="save()">Save</button>
+    </div>
+</div>

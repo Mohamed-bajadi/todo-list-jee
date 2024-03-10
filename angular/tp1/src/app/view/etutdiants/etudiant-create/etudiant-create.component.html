@@ -1,0 +1,27 @@
+<div class="card">
+  <div class="card-header"></div>
+  <div class="card-body">
+
+    <div class="form-group">
+      <label for="code">Code</label>
+      <input id="code" type="text" class="form-control" [(ngModel)]="item.code">
+    </div>
+
+    <div class="form-group">
+      <label for="firstname">FirstName</label>
+      <input id="firstname" type="text" class="form-control" [(ngModel)]="item.firstname">
+    </div>
+    <div class="form-group">
+      <label for="lastname">LastName</label>
+      <input id="lastname" type="text" class="form-control" [(ngModel)]="item.lastname">
+    </div>
+     <div class="form-group">
+      <label for="age">Age</label>
+      <input id="age" type="text" class="form-control" [(ngModel)]="item.age">
+    </div>
+  </div>
+  <div class="card-footer">
+    <button *ngIf="item.id==null" class="btn btn-lg btn-info" (click)="save()">Save</button>
+    <button *ngIf="item.id!=null" class="btn btn-lg btn-danger" (click)="update()">Update</button>
+  </div>
+</div>

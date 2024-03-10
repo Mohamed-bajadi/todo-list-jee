@@ -1,0 +1,22 @@
+<table class="table table-bordered table-hover" *ngIf="items.length!=0">
+  <thead>
+  <th>Identifaint</th>
+  <th>Code</th>
+  <th>FirstName</th>
+  <th>LastName</th>
+  <th>Age</th>
+   <th>Actions</th>
+
+  </thead>
+  <tbody>
+  <tr *ngFor="let c of items ; index as i">
+    <td>{{c.id}}</td>
+    <td>{{c.code}}</td>
+    <td>{{c.firstname}}</td>
+    <td>{{c.lastname}}</td>
+    <td>{{c.age}}</td>
+    <td><span (click)="deleteByCode(c,i)" class="fa fa-trash btn btn-sm"></span> </td>
+    <td><span (click)="edit(c,i)" class="fa fa-pencil btn btn-sm"></span> </td>
+  </tr>
+  </tbody>
+</table>
